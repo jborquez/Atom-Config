@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es-ES"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor de texto Atom y sincronización de su configuración en la nube | | dispuesto a aprender |</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://dispuestoaaprender.wordpress.com/xmlrpc.php">
+
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.pubmine.com/">
+<link rel="dns-prefetch" href="https://x.bidswitch.net/">
+<link rel="dns-prefetch" href="https://static.criteo.net/">
+<link rel="dns-prefetch" href="https://ib.adnxs.com/">
+<link rel="dns-prefetch" href="https://aax.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://bidder.criteo.com/">
+<link rel="dns-prefetch" href="https://cas.criteo.com/">
+<link rel="dns-prefetch" href="https://gum.criteo.com/">
+<link rel="dns-prefetch" href="https://ads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://gads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://ad.doubleclick.net/">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://www.googletagservices.com/">
+<link rel="dns-prefetch" href="https://cdn.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.g.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.swid.switchadhub.com/">
+<link rel="alternate" type="application/rss+xml" title="| dispuesto a aprender | » Feed" href="https://dispuestoaaprender.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="| dispuesto a aprender | » RSS de los comentarios" href="https://dispuestoaaprender.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="| dispuesto a aprender | » Editor de texto Atom y sincronización de su configuración en la&nbsp;nube RSS de los comentarios" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/feed/">
+	<script id="twitter-wjs" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/widgets.js"></script><script type="text/javascript" async="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/platform.js"></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1505864856h&ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a.css" type="text/css" media="all">
+<link rel="stylesheet" id="hemingway-rewritten-fonts-css" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2-1" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-3-1" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-4-1" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_003.css" type="text/css" media="all">
+<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_002.js"></script>
+<link rel="stylesheet" id="all-css-0-2" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dispuestoaaprender.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Fedora 23 disponible" href="https://dispuestoaaprender.wordpress.com/2015/11/05/fedora-23-disponible/">
+<link rel="next" title="Spotify en Fedora&nbsp;23" href="https://dispuestoaaprender.wordpress.com/2016/01/14/spotify-en-fedora-23/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a.html">
+<link rel="shortlink" href="https://wp.me/p3NJFJ-df">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Editor de texto Atom y sincronización de su configuración en la nube">
+<meta property="og:url" content="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/">
+<meta property="og:description" content="Hace algún tiempo recomendé editores de texto como Notepad++ y Brackets. Estos siguen siendo editores muy buenos pero ahora estoy utilizando uno diferente: Atom. Es un editor de código abierto, mod…">
+<meta property="article:published_time" content="2015-11-15T22:06:37+00:00">
+<meta property="article:modified_time" content="2016-07-05T02:22:20+00:00">
+<meta property="og:site_name" content="| dispuesto a aprender |">
+<meta property="og:image" content="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:text:title" content="Editor de texto Atom y sincronización de su configuración en la&nbsp;nube">
+<meta name="twitter:image" content="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=240">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://dispuestoaaprender.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://dispuestoaaprender.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://dispuestoaaprender.wordpress.com/osd.xml" title="| dispuesto a aprender |">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta name="theme-color" content="#ffffff">
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="| dispuesto a aprender |"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="... dispuesto a aprender de todo, y por supuesto, también a compartirlo ..."><meta name="msapplication-task" content="name=Suscribirse;action-uri=https://dispuestoaaprender.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Registrar un blog gratuito;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Ayuda de WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Foros de WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Editor de texto Atom y sincronización de su configuración en la&nbsp;nube | | dispuesto a aprender | in WordPress.com">
+<meta name="description" content="Hace algún tiempo recomendé editores de texto como Notepad++ y Brackets. Estos siguen siendo editores muy buenos pero ahora estoy utilizando uno diferente: Atom. Es un editor de código abierto, moderno, flexible, con muchos temas y paquetes para extender sus funcionalidades. ¡Les recomiendo probarlo! Lo mejor: está para Windows, Mac y Linux ;-). Un paquete…">
+	<style type="text/css">
+			.site-title a,
+		.site-description {
+			color: #ffffff;
+		}
+				.site-header-image {
+			background-image: url(https://s0.wp.com/wp-content/themes/pub/hemingway-rewritten/images/header.jpg);
+		}
+		</style>
+			<script type="text/javascript">
+		var __ATA_PP = { pt: 1, ht: 0, tn: 'hemingway-rewritten', amp: false };
+		</script>
+		<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/head.js"></script>
+		<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/publishertag.js"></script><link rel="amphtml" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<style type="text/css" id="custom-colors-css">.comment-metadata a{color:#6d6d6d}.sep{color:#6d6d6d}th,td{border-color:#ddd}th,td{border-color:rgba(221,221,221,.5)}.format-aside .entry-content,blockquote,pre{background-color:#eee}.format-aside .entry-content,blockquote,pre{background-color:rgba(238,238,238,.2)}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],textareali>article.comment,.hentry,.widget ul li,.widget,.site-main .comment-navigation,.site-main .paging-navigation,.site-main .post-navigation,.comment-list>li:first-child>article.comment:first-child,.page-title{border-color:#eee}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],textareali>article.comment,.hentry,.widget ul li,.widget,.site-main .comment-navigation,.site-main .paging-navigation,.site-main .post-navigation,.comment-list>li:first-child>article.comment:first-child,.page-title{border-color:rgba(238,238,238,.5)}.site-title a,.site-title a:visited{color:#fff}.entry-tags a,.entry-tags a:visited{color:#6d6d6d}.entry-tags a:hover{color:#353535}.featured-image .flag{color:#353535}.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.widget_search .search-submit{color:#353535}.site-footer button:hover,.site-footer input[type="button"]:hover,.site-footer input[type="reset"]:hover,.site-footer input[type="submit"]:hover,.widget_search .search-submit:hover{color:#353535}button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{color:#353535}#header-search .search-submit{color:#353535}address{background-color:#f1f1f1}address{background-color:rgba(241,241,241,.2)}.entry-content table tbody>tr:nth-child(odd)>td{background-color:#f9f9f9}.entry-content table tbody>tr:nth-child(odd)>td{background-color:rgba(249,249,249,.2)}blockquote{color:#000}.entry-title,.entry-title a,.entry-title a:visited,.comments-title{color:#2d2d2d}.format-quote .entry-content{background-color:#262626}.format-quote .entry-content{background-color:rgba(38,38,38,.2)}body,button,input,textarea{color:#444}.widget-title,th{color:#444}.comment-author a,.comment-author a:visited{color:#444}mark,ins{color:#444}.widget{color:#555}.jetpack-recipe{border-color:#666}.jetpack-recipe{border-color:rgba(102,102,102,.3)}blockquote cite{color:#666}.entry-tags a,.entry-tags a:visited{background-color:#767676}.entry-tags a,.entry-tags a:visited{background-color:rgba(118,118,118,.4)}.entry-tags a:after{border-right-color:#767676}.entry-tags a:after{border-right-color:rgba(118,118,118,.4)}.entry-categories:before{color:#6d6d6d}.wp-caption-text{color:#6d6d6d}.entry-meta,.entry-meta a,.entry-meta a:visited,.page-title,.no-comments{color:#6d6d6d}body,#infinite-footer .container,.entry-tags a:before{background-color:#fff}.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.widget_search .search-submit{background-color:#cf9e38}button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{background-color:#cf9e38}.widget_search .search-submit{border-color:#cf9e38}.site-footer button:hover,.site-footer input[type="button"]:hover,.site-footer input[type="reset"]:hover,.site-footer input[type="submit"]:hover,.widget_search .search-submit:hover{background-color:#ac8329}.widget_search .search-submit:hover{border-color:#ac8329}.featured-image .flag{background-color:#cf9e38}.jetpack-recipe-title{border-color:#cf9e38}.entry-tags a:hover{background-color:#cf9e38}.entry-tags a:hover:after{border-right-color:#cf9e38}#header-search .search-submit{border-color:#cf9e38}#header-search .search-submit{background-color:#cf9e38}#header-search .search-submit:hover{background-color:#ac8329}#header-search .search-submit:hover{border-color:#ac8329}a,a:visited,a:hover,a:focus,a:active,.entry-title a:hover{color:#8b681c}.site-title a:hover,.site-title a:focus{color:#cf9e38}.site-footer a,.site-footer a:visited,.site-footer a:hover,.site-footer a:focus,.site-footer a:active{color:#cf9e38}.widget-areas a,.widget-areas a:visited,.widget-areas a:hover,.widget-areas a:focus,.widget-areas a:active{color:#cf9e38}</style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ga.js"></script>
+<style type="text/css"></style><script type="text/javascript" async="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/defineBrowser.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/classCommunicate.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/classSearchFunc.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/classCommon.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/classDragDrop.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/classRepository.js"></script><script type="application/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/Init2.js"></script><link type="text/css" rel="stylesheet" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/content_style2.css"><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/services.css"><script type="text/javascript" async="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_002"></script><script type="text/javascript" charset="utf-8" async="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/timeline.js"></script></head>
+
+<body class="post-template-default single single-post postid-821 single-format-standard mp6 customizer-styles-applied highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-image" style="bottom: -354.667px;">
+			<div class="site-branding-wrapper" style="opacity: -1.30803;">
+				<div class="site-branding">
+					<h1 class="site-title"><a href="https://dispuestoaaprender.wordpress.com/" rel="home">| dispuesto a aprender |</a></h1>
+					<h2 class="site-description">… dispuesto a aprender de todo, y por supuesto, también a compartirlo …</h2>
+				</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	<nav id="site-navigation" class="main-navigation clear" role="navigation">
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="screen-reader-text">Menú</span></button>
+		<a class="skip-link screen-reader-text" href="#content">Saltar al contenido</a>
+
+		<div id="primary-menu" class="menu"><ul aria-expanded="false" class=" nav-menu">
+<li><a href="https://dispuestoaaprender.wordpress.com/">Inicio</a></li><li class="page_item page-item-1"><a href="https://dispuestoaaprender.wordpress.com/acerca/">Acerca</a></li>
+</ul></div>
+		<div id="header-search-toggle">
+			<span class="screen-reader-text">Buscar</span>
+		</div>
+		<div id="header-search">
+			<form role="search" method="get" class="search-form" action="https://dispuestoaaprender.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Buscar:</span>
+					<input class="search-field" placeholder="Buscar …" name="s" type="search">
+				</label>
+				<input class="search-submit" value="Buscar" type="submit">
+			</form>		</div>
+	</nav><!-- #site-navigation -->
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+					
+			
+<article id="post-821" class="post-821 post type-post status-publish format-standard hentry category-tecnologia tag-atom tag-brackets tag-codigo-abierto tag-configuracion tag-configurar tag-editor-de-texto tag-flexible tag-gist tag-github tag-imagen tag-instalar tag-linux tag-mac tag-moderno tag-notepad tag-nube tag-open-source tag-paquetes tag-pasos tag-sincronizacion tag-sistemas-operativos tag-tutorial tag-windows">
+	<header class="entry-header">
+					<h1 class="entry-title">Editor de texto Atom y sincronización de su configuración en la&nbsp;nube</h1>				<div class="entry-meta">
+			<span class="posted-on"><a href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/" rel="bookmark"><time class="entry-date published" datetime="2015-11-15T16:06:37+00:00">noviembre 15, 2015</time><time class="updated" datetime="2016-07-04T20:22:20+00:00">julio 4, 2016</time></a></span><span class="byline"><span class="sep"> / </span><span class="author vcard"><a class="url fn n" href="https://dispuestoaaprender.wordpress.com/author/davr59/">davr59</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p style="text-align:justify;">Hace algún tiempo recomendé editores de texto como <a href="https://notepad-plus-plus.org/">Notepad++</a> y <a href="http://brackets.io/">Brackets</a>. Estos siguen siendo editores muy buenos pero ahora estoy utilizando uno diferente: <a href="https://atom.io/">Atom</a>.</p>
+<p style="text-align:justify;">Es un editor de código abierto, moderno, 
+flexible, con muchos temas y paquetes para extender sus funcionalidades.
+ ¡Les recomiendo probarlo! Lo mejor: está para Windows, Mac y Linux ;-).</p>
+<hr>
+<p style="text-align:justify;">Un paquete que me llamó la atención es <span class="repo-root js-repo-root"><a class="" href="https://github.com/Hackafe/atom-sync-settings">sync-settings</a></span>.
+ Este paquete permite a través de GitHub y Gist sincronizar la 
+configuración y paquetes en diferentes instancias de Atom (en mi caso, 
+Atom en Linux y Atom en Windows). Es muy fácil de configurar y me ha 
+funcionado perfectamente</p>
+<ol>
+<li style="text-align:justify;">Lo pueden encontrar dentro de Atom:<strong><em> Settings -&gt; Install -&gt; </em></strong>En el search poner<strong><em> sync-settings</em> </strong></li>
+<li style="text-align:justify;">Luego sólo se ocupa configurarlo dentro de Atom: <strong><em>Settings -&gt; Packages-&gt; </em></strong>Seleccionar <strong><em>Settings </em></strong>de <strong><em>sync-settings</em></strong></li>
+<li style="text-align:justify;">Es necesario tener una cuenta de GitHub. En GitHub se debe crear un <a href="https://github.com/settings/tokens">Personal Access Token</a> y copiar ese token en la configuración anterior. Además se ocupar crear un <a href="https://gist.github.com/">Gist</a> y copiar su ID (es el GUID en la dirección de URL) también en la configuracion anterior. ¡Y listo!</li>
+<li style="text-align:justify;">Para utilizarlo en Atom: <strong><em>Packages-&gt; Synchronize Settings -&gt; </em></strong>Se puede seleccionar <strong><em>Backup</em> </strong>o <strong><em>Restore</em></strong></li>
+</ol>
+<p>Me cuentan que les parece y cualquier consulta estoy a la orden. ¡Feliz semana!</p>
+<p style="text-align:center;"><a href="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png"><img data-attachment-id="822" data-permalink="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/atom-2/" data-orig-file="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png" data-orig-size="1024,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="atom" data-image-description="" data-medium-file="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=300&amp;h=300" data-large-file="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=676" class="alignnone size-medium wp-image-822" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/atom.png" alt="imagen del logo del editor de texto Atom" srcset="https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=300&amp;h=300 300w, https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=600&amp;h=600 600w, https://dispuestoaaprender.files.wordpress.com/2015/11/atom.png?w=150&amp;h=150 150w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300"></a></p>
+<p style="text-align:justify;">
+			<style type="text/css">
+			div.wpmrec2x{max-width:610px;}
+			div.wpmrec2x div.u > div{float:left;margin-right:10px;}
+			div.wpmrec2x div.u > div:nth-child(3n){margin-right:0px;}
+			</style>		</p><div class="wpcnt">
+			<div class="wpa wpmrec wpmrec2x" style="display: inline-block ! important;">
+				<span class="wpa-about">Anuncios</span>
+				<div class="u">
+										<script type="text/javascript" id="s26942">
+						(function(g,$){if("undefined"!=typeof g.__ATA){
+							g.__ATA.initAd({collapseEmpty:'after', sectionId:26942, width:300, height:250});
+							g.__ATA.initAd({collapseEmpty:'after', sectionId:114160, width:300, height:250});
+						}})(window,jQuery);
+					</script><div id="adtags-1" style="width:300px;height:250px;"><iframe scrolling="no" style="border:none;overflow:hidden;width:300px;height:250px;" width="300" frameborder="0" height="250"></iframe></div><div id="adtags-2" style="width:300px;height:250px;"><iframe scrolling="no" style="border:none;overflow:hidden;width:300px;height:250px;" width="300" frameborder="0" height="250"></iframe></div>
+				</div>
+						<div id="crt-1743082618" style="width: 300px; height: 250px; display: none ! important;"></div>
+		<script type="text/javascript">
+		var o = document.getElementById('crt-1743082618');
+		if ("undefined"!=typeof Criteo) {
+			var p = o.parentNode;
+			p.style.setProperty('display', 'inline-block', 'important');
+			o.style.setProperty('display', 'block', 'important');
+			
+Criteo.DisplayAcceptableAdIfAdblocked({zoneid:388248,containerid:"crt-1743082618",collapseContainerIfNotAdblocked:true,"callifnotadblocked":
+ function () {var o = document.getElementById('crt-1743082618'); 
+o.style.setProperty('display','none','important');o.style.setProperty('visbility','hidden','important');
+ } });
+		} else {
+			o.style.setProperty('display', 'none', 'important');
+			o.style.setProperty('visibility', 'hidden', 'important');
+		}
+		</script>		<div id="crt-1801659635" style="width: 300px; height: 250px; display: none ! important;"></div>
+		<script type="text/javascript">
+		var o = document.getElementById('crt-1801659635');
+		if ("undefined"!=typeof Criteo) {
+			var p = o.parentNode;
+			p.style.setProperty('display', 'inline-block', 'important');
+			o.style.setProperty('display', 'block', 'important');
+			
+Criteo.DisplayAcceptableAdIfAdblocked({zoneid:837497,containerid:"crt-1801659635",collapseContainerIfNotAdblocked:true,"callifnotadblocked":
+ function () {var o = document.getElementById('crt-1801659635'); 
+o.style.setProperty('display','none','important');o.style.setProperty('visbility','hidden','important');
+ } });
+		} else {
+			o.style.setProperty('display', 'none', 'important');
+			o.style.setProperty('visibility', 'hidden', 'important');
+		}
+		</script>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-821" class="share-twitter sd-button share-icon" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?share=twitter&amp;nb=1" target="_blank" title="Haz clic para compartir en Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-821" class="share-facebook sd-button share-icon" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?share=facebook&amp;nb=1" target="_blank" title="Comparte en Facebook"><span>Facebook<span class="share-count">1</span></span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-821" class="share-google-plus-1 sd-button share-icon" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?share=google-plus-1&amp;nb=1" target="_blank" title="Haz clic para compartir en Google+"><span>Google</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-56182647-821-59f891c90875c" data-src="//widgets.wp.com/likes/#blog_id=56182647&amp;post_id=821&amp;origin=dispuestoaaprender.wordpress.com&amp;obj_id=56182647-821-59f891c90875c" data-name="like-post-frame-56182647-821-59f891c90875c"><h3 class="sd-title">Me gusta:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Me gusta</span></span> <span class="loading">Cargando...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-56182647-821-59f891c90875c" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_003.html" width="100%" frameborder="0" height="55px"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+						<div class="entry-categories">
+					<a href="https://dispuestoaaprender.wordpress.com/category/tecnologia/" rel="category tag">Tecnología</a>				</div>
+					<div class="entry-tags"><a href="https://dispuestoaaprender.wordpress.com/tag/atom/" rel="tag">atom</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/brackets/" rel="tag">brackets</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/codigo-abierto/" rel="tag">código abierto</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/configuracion/" rel="tag">configuración</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/configurar/" rel="tag">configurar</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/editor-de-texto/" rel="tag">editor de texto</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/flexible/" rel="tag">flexible</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/gist/" rel="tag">gist</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/github/" rel="tag">github</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/imagen/" rel="tag">imagen</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/instalar/" rel="tag">instalar</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/linux/" rel="tag">linux</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/mac/" rel="tag">mac</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/moderno/" rel="tag">moderno</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/notepad/" rel="tag">notepad++</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/nube/" rel="tag">nube</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/open-source/" rel="tag">open source</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/paquetes/" rel="tag">paquetes</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/pasos/" rel="tag">pasos</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/sincronizacion/" rel="tag">sincronización</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/sistemas-operativos/" rel="tag">sistemas operativos</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/tutorial/" rel="tag">tutorial</a>, <a href="https://dispuestoaaprender.wordpress.com/tag/windows/" rel="tag">windows</a></div>	</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Navegador de artículos</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://dispuestoaaprender.wordpress.com/2015/11/05/fedora-23-disponible/" rel="prev"><span class="meta-nav">←</span> Fedora 23 disponible</a></div><div class="nav-next"><a href="https://dispuestoaaprender.wordpress.com/2016/01/14/spotify-en-fedora-23/" rel="next">Spotify en Fedora&nbsp;23 <span class="meta-nav">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			3 comentarios en “<span>Editor de texto Atom y sincronización de su configuración en la&nbsp;nube</span>”		</h2>
+
+		
+		<ol class="comment-list">
+				<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-64">
+		<article id="comment-64" class="comment">
+			<footer>
+				<div class="comment-author vcard">
+					<img alt="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/b89249d950d2156a8b542b51944d2831.jpg" class="avatar avatar-60 grav-hashed grav-hijack" id="grav-b89249d950d2156a8b542b51944d2831-0" width="60" height="60">					<cite class="fn"><a href="http://www.josesimo.com.ve/" rel="external nofollow" class="url">simo7ven</a></cite>				</div><!-- .comment-author .vcard -->
+				
+				<div class="comment-meta comment-metadata">
+					<a href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/#comment-64"><time pubdate="" datetime="2015-11-23T09:08:48+00:00">
+					noviembre 23, 2015 en 09:08					</time></a>
+				</div><!-- .comment-meta .commentmetadata -->
+			</footer>
+
+			<div class="comment-content"><p>Que tal estoy revisando la tu post me
+ parece muy interesante! este editor me parece muy cómodo y ayuda mucho 
+en cosas que hasta ahora voy manejando! No estoy seguro si hice 
+correctamente los pasos! pero las configuraciones donde puedo verlas?</p>
+</div>
+
+			<div class="comment-actions">
+				<a rel="nofollow" class="comment-reply-link" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?replytocom=64#respond" onclick='return addComment.moveForm( "comment-64", "64", "respond", "821" )' aria-label="Responder a simo7ven">Responder</a>							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-davr59 bypostauthor odd alt depth-2 highlander-comment" id="li-comment-65">
+		<article id="comment-65" class="comment">
+			<footer>
+				<div class="comment-author vcard">
+					<img alt="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/b17081e3c85cedfbc4c588a25bf52707.jpg" class="avatar avatar-60 grav-hashed grav-hijack" id="grav-b17081e3c85cedfbc4c588a25bf52707-0" width="60" height="60">					<cite class="fn"><a href="https://dispuestoaaprender.wordpress.com/" rel="external nofollow" class="url">davr59</a></cite>				</div><!-- .comment-author .vcard -->
+				
+				<div class="comment-meta comment-metadata">
+					<a href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/#comment-65"><time pubdate="" datetime="2015-11-23T19:43:59+00:00">
+					noviembre 23, 2015 en 19:43					</time></a>
+				</div><!-- .comment-meta .commentmetadata -->
+			</footer>
+
+			<div class="comment-content"><p>Hola! ¿Lo instalaste en inglés o 
+español? En el menú de arriba: File -&gt; Settings. Sale la pantalla de 
+Settings y ahí hay que elegir Packages. Ahí te carga todos los paquetes 
+que tengas instalados. En Community Packages si ya instalaste el paquete
+ Sync-Settings, debería salirte y una opción de Settings. Le das click y
+ te sale la configuración del paquete. Me cuentas.</p>
+</div>
+
+			<div class="comment-actions">
+				<a rel="nofollow" class="comment-reply-link" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?replytocom=65#respond" onclick='return addComment.moveForm( "comment-65", "65", "respond", "821" )' aria-label="Responder a davr59">Responder</a>							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="li-comment-67">
+		<article id="comment-67" class="comment">
+			<footer>
+				<div class="comment-author vcard">
+					<img alt="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/photo.png" class="avatar avatar-60" width="60" height="60">					<cite class="fn"><a href="https://plus.google.com/111140118956737991067" rel="external nofollow" class="url">JuanTux Narvaez</a></cite>				</div><!-- .comment-author .vcard -->
+				
+				<div class="comment-meta comment-metadata">
+					<a href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/#comment-67"><time pubdate="" datetime="2016-02-19T18:59:12+00:00">
+					febrero 19, 2016 en 18:59					</time></a>
+				</div><!-- .comment-meta .commentmetadata -->
+			</footer>
+
+			<div class="comment-content"><p>Hola David mira es que instale el 
+Sync-setting en Atom, no etiendo bien sobre la configuracion del Gist no
+ se que URL copiar me da error el Atom GIST ID no Fount</p>
+</div>
+
+			<div class="comment-actions">
+				<a rel="nofollow" class="comment-reply-link" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/?replytocom=67#respond" onclick='return addComment.moveForm( "comment-67", "67", "respond", "821" )' aria-label="Responder a JuanTux Narvaez">Responder</a>							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Responder <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://dispuestoaaprender.wordpress.com/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://dispuestoaaprender.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<input id="highlander_comment_nonce" name="highlander_comment_nonce" value="b91a3a5fd7" type="hidden"><input name="_wp_http_referer" value="/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/" type="hidden">
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; height: 0px ! important; min-height: 0px ! important; overflow: hidden; transition: none 0s ease 0s ; font-family: Arial,Helvetica,Tahoma,Verdana,sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 23.8px; width: 654px;" class="autosizejs ">Introduce aquí tu comentario...</textarea><textarea id="comment" name="comment" title="Introduce aquí tu comentario..." placeholder="Introduce aquí tu comentario..." style="height: 125px; overflow: hidden; overflow-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Introduce tus datos o haz clic en un icono para iniciar sesión:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Invitado">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_004.html" scrolling="no" allowtransparency="true" seamless="seamless" width="24" frameborder="0" height="24"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ad516503a11cd5ca435acc9bb6523536.png" alt="Gravatar" class="no-grav" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Correo electrónico <span class="required">(necesario)</span> <span class="nopublish">(La dirección no se hará pública)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nombre <span class="required">(necesario)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Web</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url"></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ad516503a11cd5ca435acc9bb6523536.png" alt="Logo de WordPress.com" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> Estás comentando usando tu cuenta de <span class="skimlinks-unlinked">WordPress.com</span>. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ad516503a11cd5ca435acc9bb6523536.png" alt="Imagen de Twitter" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> Estás comentando usando tu cuenta de Twitter. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ad516503a11cd5ca435acc9bb6523536.png" alt="Foto de Facebook" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> Estás comentando usando tu cuenta de Facebook. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/ad516503a11cd5ca435acc9bb6523536.png" alt="Google+ photo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" type="hidden">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> Estás comentando usando tu cuenta de Google+. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'googleplus'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancelar</a></div>
+		<p>Conectando a %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' 
+).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text 
+length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight }
+ ).delay( 100 ).queue( function(n) { clearInterval( timer ); 
+HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notificarme los nuevos comentarios por correo electrónico.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" id="comment-submit" class="submit" value="Publicar comentario" type="submit"> <input name="comment_post_ID" value="821" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="a5e6a2f7ce" type="hidden"></p>
+<input name="genseq" value="1509462473" type="hidden">
+<p style="display: none;"></p>			<input id="ak_js" name="ak_js" value="1509462478942" type="hidden"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	<div id="secondary" class="widget-area" role="complementary">
+		<aside id="follow_button_widget-2" class="widget widget_follow_button_widget">
+		<iframe src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/index.html" scrolling="no" width="100%" frameborder="0" height="20"></iframe>
+		<script type="text/javascript">(function(d){var f = 
+d.getElementsByTagName('SCRIPT')[0], p = 
+d.createElement('SCRIPT');p.type = 'text/javascript';p.async = 
+true;p.src = 
+'//widgets.wp.com/platform.js';f.parentNode.insertBefore(p,f);}(document));</script>
+
+		</aside><aside id="gravatar-2" class="widget widget_gravatar"><h1 class="widget-title">davr59</h1><p><a href="http://gravatar.com/davr59"><img alt="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/d3292adae9d1129c71f21e5d6d22825c.jpg" class="avatar avatar-96 grav-widget-left grav-hashed" style="margin-top: 3px; padding: 0 0.5em 0 0; float: left" id="grav-d3292adae9d1129c71f21e5d6d22825c-0" width="96" height="96"></a></p>
+</aside><aside id="twitter_timeline-2" class="widget widget_twitter_timeline"><h1 class="widget-title">Follow me on Twitter</h1><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 225px; height: 195.133px; padding: 0px; border: medium none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px;" data-widget-id="531917217953103872" title="Cronología de Twitter" frameborder="0"></iframe></aside><aside id="tag_cloud-2" class="widget widget_tag_cloud"><h1 class="widget-title"></h1><div style="overflow: hidden;"><a href="https://dispuestoaaprender.wordpress.com/category/ajedrez/" style="font-size: 106.32530120482%; padding: 1px; margin: 1px;" title="Ajedrez (4)">Ajedrez</a> <a href="https://dispuestoaaprender.wordpress.com/category/animacion-graficacion/" style="font-size: 118.97590361446%; padding: 1px; margin: 1px;" title="Animación | Graficación (10)">Animación | Graficación</a> <a href="https://dispuestoaaprender.wordpress.com/category/astronomia/" style="font-size: 100%; padding: 1px; margin: 1px;" title="Astronomía (1)">Astronomía</a> <a href="https://dispuestoaaprender.wordpress.com/category/biblia/" style="font-size: 100%; padding: 1px; margin: 1px;" title="Biblia (1)">Biblia</a> <a href="https://dispuestoaaprender.wordpress.com/category/blog-2/" style="font-size: 102.10843373494%; padding: 1px; margin: 1px;" title="Blog (2)">Blog</a> <a href="https://dispuestoaaprender.wordpress.com/category/cine-television/" style="font-size: 135.84337349398%; padding: 1px; margin: 1px;" title="Cine | Televisión (18)">Cine | Televisión</a> <a href="https://dispuestoaaprender.wordpress.com/category/comics-mangas/" style="font-size: 108.43373493976%; padding: 1px; margin: 1px;" title="Comics | Mangas (5)">Comics | Mangas</a> <a href="https://dispuestoaaprender.wordpress.com/category/deportes-2/" style="font-size: 116.86746987952%; padding: 1px; margin: 1px;" title="Deportes (9)">Deportes</a> <a href="https://dispuestoaaprender.wordpress.com/category/ejercicio/" style="font-size: 106.32530120482%; padding: 1px; margin: 1px;" title="Ejercicio (4)">Ejercicio</a> <a href="https://dispuestoaaprender.wordpress.com/category/escritura/" style="font-size: 100%; padding: 1px; margin: 1px;" title="Escritura (1)">Escritura</a> <a href="https://dispuestoaaprender.wordpress.com/category/frases/" style="font-size: 102.10843373494%; padding: 1px; margin: 1px;" title="frases (2)">frases</a> <a href="https://dispuestoaaprender.wordpress.com/category/guitarra/" style="font-size: 100%; padding: 1px; margin: 1px;" title="Guitarra (1)">Guitarra</a> <a href="https://dispuestoaaprender.wordpress.com/category/lectura/" style="font-size: 121.0843373494%; padding: 1px; margin: 1px;" title="Lectura (11)">Lectura</a> <a href="https://dispuestoaaprender.wordpress.com/category/magia/" style="font-size: 104.21686746988%; padding: 1px; margin: 1px;" title="Magia (3)">Magia</a> <a href="https://dispuestoaaprender.wordpress.com/category/musica-2/" style="font-size: 104.21686746988%; padding: 1px; margin: 1px;" title="Música (3)">Música</a> <a href="https://dispuestoaaprender.wordpress.com/category/podcasts/" style="font-size: 102.10843373494%; padding: 1px; margin: 1px;" title="Podcasts (2)">Podcasts</a> <a href="https://dispuestoaaprender.wordpress.com/category/poesia/" style="font-size: 104.21686746988%; padding: 1px; margin: 1px;" title="Poesía (3)">Poesía</a> <a href="https://dispuestoaaprender.wordpress.com/category/tecnologia/" style="font-size: 258.13253012048%; padding: 1px; margin: 1px;" title="Tecnología (76)">Tecnología</a> <a href="https://dispuestoaaprender.wordpress.com/category/vida/" style="font-size: 275%; padding: 1px; margin: 1px;" title="Vida (84)">Vida</a> <a href="https://dispuestoaaprender.wordpress.com/category/videojuegos/" style="font-size: 108.43373493976%; padding: 1px; margin: 1px;" title="Videojuegos (5)">Videojuegos</a> </div></aside>	</div><!-- #secondary -->
+
+	</div><!-- #content -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+			<a href="https://wordpress.com/?ref=footer_blog">Blog de WordPress.com.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-b89249d950d2156a8b542b51944d2831">
+	</div>
+	<div class="grofile-hash-map-b17081e3c85cedfbc4c588a25bf52707">
+	</div>
+	<div class="grofile-hash-map-6447c01745ed01d34a2bab30ffd772b9">
+	</div>
+	<div class="grofile-hash-map-d3292adae9d1129c71f21e5d6d22825c">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Iniciando 
+sesi\u00f3n\u2026","submittingText":"Publicando 
+comentario\u2026","postCommentText":"Publicar 
+comentario","connectingToText":"Conectando a 
+%s","commentingAsText":"%1$s: Est\u00e1s comentando usando tu cuenta de 
+%2$s.","logoutText":"Cerrar 
+sesi\u00f3n","loginText":"Acceder","connectURL":"https:\/\/dispuestoaaprender.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/dispuestoaaprender.wordpress.com\/wp-login.php?action=logout&_wpnonce=84325af2f2","homeURL":"https:\/\/dispuestoaaprender.wordpress.com\/","postID":"821","gravDefault":"identicon","enterACommentError":"Por
+ favor, introduce un comentario","enterEmailError":"Por favor introduce 
+tu direcci\u00f3n de correo electr\u00f3nico 
+aqu\u00ed","invalidEmailError":"Direcci\u00f3n de correo 
+electr\u00f3nico no v\u00e1lida","enterAuthorError":"Por favor, 
+introduce tu nombre aqu\u00ed","gravatarFromEmail":"Esta imagen se 
+mostrar\u00e1 cuando dejes un comentario. Haz clic para 
+cambiarla.","logInToExternalAccount":"Inicia sesi\u00f3n para usar los 
+datos de una de estas 
+cuentas.","change":"Cambiar","changeAccount":"Cambiar 
+cuenta","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/*
+ ]]> */
+</script>
+<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a.js"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Añade tus pensamientos aquí... (opcional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publicar en</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancelar</a></span>
+				<input name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Rebloguear entrada" type="submit">
+				<input id="carousel-reblog-blog-id" value="56182647" type="hidden">
+				<input id="carousel-reblog-blog-url" value="https://dispuestoaaprender.wordpress.com" type="hidden">
+				<input id="carousel-reblog-blog-title" value="| dispuesto a aprender |" type="hidden">
+				<input id="carousel-reblog-post-url" value="" type="hidden">
+				<input id="carousel-reblog-post-title" value="" type="hidden">
+			</div>
+
+			<input id="_wpnonce" name="_wpnonce" value="dde534f80d" type="hidden"><input name="_wp_http_referer" value="/2015/11/15/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion/" type="hidden">		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = 
+{"https:\/\/dispuestoaaprender.wordpress.com\/2015\/11\/15\/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion\/":821};
+
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+		<link rel="stylesheet" id="all-css-0-3" href="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"56182647","siteName":"| dispuesto a 
+aprender 
+|","siteURL":"http:\/\/dispuestoaaprender.wordpress.com","icon":"<img 
+alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' 
+class='avatar avatar-50' height='50' width='50' 
+\/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hemingway-rewritten","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/dispuestoaaprender.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F","themeURL":"https:\/\/wordpress.com\/theme\/hemingway-rewritten\/","xhrURL":"https:\/\/dispuestoaaprender.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"5331b75c18","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input
+ type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"4970dfc239\" 
+\/>","referer":"https:\/\/dispuestoaaprender.wordpress.com\/2015\/11\/15\/editor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion\/","canFollow":"1","feedID":"13033432","statusMessage":"","customizeLink":"https:\/\/dispuestoaaprender.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F","postID":"821","shortlink":"https:\/\/wp.me\/p3NJFJ-df","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/dispuestoaaprender.wordpress.com\/821","statsLink":"https:\/\/wordpress.com\/stats\/post\/821\/dispuestoaaprender.wordpress.com","i18n":{"view":"Ver
+ 
+sitio","follow":"Seguir","following":"Siguiendo","edit":"Editar","login":"Acceder","signup":"Registrarse","customize":"Personalizar","report":"Denunciar
+ este contenido","themeInfo":"Obtener el tema: Hemingway 
+Rewritten","shortlink":"Copiar enlace 
+corto","copied":"Copiado","followedText":"Las nuevas publicaciones de 
+este sitio aparecer\u00e1n ahora en tu <a 
+href=\"https:\/\/wordpress.com\/\">Lector<\/a>","foldBar":"Contraer esta
+ barra","unfoldBar":"Expandir esta barra","editSubs":"Gestionar las 
+suscripciones","viewReader":"Ver sitio en el 
+Lector","viewReadPost":"View post in 
+Reader","subscribe":"Suscr\u00edbeme","enterEmail":"Introduce tu 
+direcci\u00f3n de correo electr\u00f3nico","followers":"\u00danete a 
+otros 1.021 seguidores","alreadyUser":"\u00bfYa tienes una cuenta de 
+WordPress.com? <a 
+href=\"https:\/\/dispuestoaaprender.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F\">Accede
+ ahora<\/a>.","stats":"Estad\u00edsticas"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = 
+{"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"es","ajaxurl":"https:\/\/dispuestoaaprender.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"d4bedd0f33","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comentario","post_comment":"Publicar
+ comentario","write_comment":"Escribir un 
+Comentario...","loading_comments":"Cargando 
+comentarios...","download_original":"Ver tama\u00f1o completo <span 
+class=\"photo-size\">{0}<span 
+class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Por
+ favor, aseg\u00farate de enviar el texto con tu 
+comentario.","no_comment_email":"Por favor, proporciona una 
+direcci\u00f3n de correo electr\u00f3nico para 
+comentar.","no_comment_author":"Por favor, a\u00f1ade tu nombre al 
+comentario.","comment_post_error":"Lo sentimos, pero hubo un error al 
+publicar tu comentario. Por favor, vuelve a intentarlo m\u00e1s 
+tarde.","comment_approved":"Se aprob\u00f3 tu 
+comentario.","comment_unapproved":"Tu comentario est\u00e1 en 
+moderaci\u00f3n.","camera":"C\u00e1mara","aperture":"Abertura","shutter_speed":"Velocidad
+ de obturaci\u00f3n","focal_length":"Longitud 
+focal","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/dispuestoaaprender.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F","blog_id":"56182647","local_comments_commenting_as":"<fieldset><label
+ for=\"email\">Correo electr\u00f3nico (Obligatorio)<\/label> <input 
+type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-email-field\" 
+\/><\/fieldset><fieldset><label for=\"author\">Nombre 
+(Obligatorio)<\/label> <input type=\"text\" name=\"author\" 
+class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-author-field\" 
+\/><\/fieldset><fieldset><label for=\"url\">Web<\/label> <input 
+type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-url-field\" 
+\/><\/fieldset>","reblog":"Rebloguear","reblogged":"Reblogueado","reblog_add_thoughts":"A\u00f1ade
+ tus pensamientos aqu\u00ed... 
+(opcional)","reblogging":"Reblogueando...","post_reblog":"Reblog de 
+entrada","stats_query_args":"blog=56182647&v=wpcom&tz=-6&user_id=0&subd=dispuestoaaprender","is_public":"1","reblog_enabled":""};
+/*
+ ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"es","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_003.js"></script><div id="actionbar" class="actnbr-pub-hemingway-rewritten actnbr-has-follow actnbr-hidden"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Seguir</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://dispuestoaaprender.wordpress.com/"><img alt="" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/wpcom-gray-white.png" class="avatar avatar-50" width="50" height="50"> | dispuesto a aprender |</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://dispuestoaaprender.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Personalizar<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Seguir</span></a></li> 					<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Registrarse</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://dispuestoaaprender.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fdispuestoaaprender.wordpress.com%2F2015%2F11%2F15%2Feditor-de-texto-atom-y-sincronizacion-en-la-nube-de-su-configuracion%2F">Acceder</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="https://wp.me/p3NJFJ-df">Copiar enlace corto</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Denunciar este contenido</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Gestionar las suscripciones</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="">Contraer esta barra</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "dispuestoaaprender.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/725X1342.js"></script>		<iframe src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text">A <span>%d</span> blogueros les gusta esto:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', 
+{'blog_id':'56182647','blog_tz':'-6','user_lang':'es','blog_lang':'es','user_id':'0'}]);
+_stq.push(['view',
+ 
+{'blog':'56182647','v':'wpcom','tz':'-6','user_id':'0','post':'821','subd':'dispuestoaaprender'}]);
+_stq.push(['extra',
+ 
+{'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMmdIYVRKb24/czlSQy13UHMwPWd2P3poaEd+YzVhRFtdZS1hbVUtMFJ0LHFWUS5mX2g9P1JUZE5idWJbJTF1dHVjaTUvUDN3SkozNFlPam5CLktdQ35fdHVZbkgwbkpLVnQvdFdzLVBZNn5FZ2VKdy5VbVR1eTBdMC9nJms9fld0RUZ8WXVITV9CUCZmNHBLVXVBbGZsaTZfTEljSnlQfj1KJkw4eTkwcHBPdXhbUWVKeVg0QX5nb2NiMEl3LUV0VF9rXVYzPzRdRS9Iai4uVTdEM1VpNT9jfnVxRlF1V29zL1tpYTlaeXZSd0I1ZE5HTHxrOHosUVUlcS1rekxUUzVOMi81bngxNnlEVld3WkpdSF9vN1VqQndCQ3FrY09DUg=='}]);
+_stq.push([
+ 'clickTrackerInit', '56182647', '821' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + 
+wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + 
+wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + 
+'//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba='
+ + Math.random();
+	}
+	
+}
+</script>
+
+
+<img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/g.gif" alt=":)" id="wpstats"><img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_005" style="display: none;" width="1" height="1"><img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_004" style="display: none;" width="1" height="1"><img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_003" style="display: none;" width="1" height="1"><img src="Editor%20de%20texto%20Atom%20y%20sincronizaci%C3%B3n%20de%20su%20configuraci%C3%B3n%20en%20la%20nube%20_%20_%20dispuesto%20a%20aprender%20__files/a_006" style="display: none;" width="1" height="1"></body><div id="sideDragRight" style="display: none;"><div class="side_search_box" id="side_google_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/webSearch.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_wikipedia_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/wikipedia.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_youtube_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/youtube.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_translate_search" data-allowed-type="text" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/translate.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_image_search" data-allowed-type="all" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/imageSearch.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div></div><div id="sideDragLeft" style="display: none;"><div class="side_search_box" id="side_facebook" data-allowed-type="images" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/facebook.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_twitter" data-allowed-type="images" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/twitter.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_googleplus" data-allowed-type="images" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/google+.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_pinterest" data-allowed-type="images" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/pinterest.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div><div class="side_search_box" id="side_linkedin" data-allowed-type="images" style="height: 20%; background-image: url(&quot;resource://DnDlogos2/linkedin.png&quot;); background-color: rgb(255, 255, 255); background-size: cover; background-position: center center;"></div></div></html>

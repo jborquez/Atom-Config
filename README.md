@@ -42,3 +42,18 @@
   6.- Repetir línea (Copiar lineas)--> 'Ctrl + Shift + d'
 
   7.- Generar código para HREF --> a> + 'Ctrl e'
+
+
+  ## Sincronizar paquetes de ATOM
+
+  Un paquete que me llamó la atención es sync-settings. Este paquete permite a través de GitHub y Gist sincronizar la configuración y paquetes en diferentes instancias de Atom (en mi caso, Atom en Linux y Atom en Windows). Es muy fácil de configurar y me ha funcionado perfectamente
+
+    Lo pueden encontrar dentro de Atom: Settings -> Install -> En el search poner sync-settings
+    Luego sólo se ocupa configurarlo dentro de Atom:
+    Settings -> Packages-> Seleccionar Settings de sync-settings
+
+    Es necesario tener una cuenta de GitHub.
+    En GitHub se debe crear un Personal Access Token y copiar ese token en la configuración anterior.
+    Además se ocupar crear un Gist y copiar su ID (es el GUID en la dirección de URL) también en la configuracion anterior. ¡Y listo!
+
+    Para utilizarlo en Atom: Packages-> Synchronize Settings -> Se puede seleccionar Backup o Restore
