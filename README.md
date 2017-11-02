@@ -45,6 +45,8 @@
 
 
   ## Sincronizar paquetes de ATOM
+  --> Token: aaa1c374f85b5c868dc5bce8048932d279f6998c
+  --> Gist: 2065efcfccd9c3aaccdbaced6cede607
 
   Un paquete que me llamó la atención es sync-settings. Este paquete permite a través de GitHub y Gist sincronizar la configuración y paquetes en diferentes instancias de Atom (en mi caso, Atom en Linux y Atom en Windows). Es muy fácil de configurar y me ha funcionado perfectamente
 
